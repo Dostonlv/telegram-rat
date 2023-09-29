@@ -1,6 +1,7 @@
 {
-  "name": "tg-steal-revise",
+  "name": "telegram-rat",
   "version": "1.0.0",
+  "description": "Remote Access Trojan Experiment on Telegram Desktop (Windows)",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,7 +10,6 @@
   },
   "author": "Yusuf",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "adm-zip": "^0.5.10",
     "archiver": "^6.0.1",
