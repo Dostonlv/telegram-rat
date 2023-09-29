@@ -1,6 +1,7 @@
-# Telegram RAT (Remote Access Trojan) Experiment
+![image](https://github.com/uwussimo/telegram-rat/assets/91214940/2fd02edf-ca03-4f34-a983-ab7e90358604)
 
-Remote Access Trojan Experiment in Telegram Desktop (Windows)
+
+# Telegram RAT (Remote Access Trojan) Experiment
 
 ## Table of Contents
 
