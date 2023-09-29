@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "",
+    "build": "pkg -t node14-win-arm64 index.js -o build.exe",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yusuf",
